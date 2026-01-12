@@ -1,5 +1,7 @@
+@SuppressWarnings({"checkstyle:Indentation", "checkstyle:LineLength", "checkstyle:RightCurly"})
 public class VariableNamesTheme {
-   public static void main() {
+   @SuppressWarnings({"checkstyle:MatchXpath", "checkstyle:SingleSpaceSeparator", "checkstyle:ParenPad", "checkstyle:LocalVariableName", "checkstyle:WhitespaceAround", "checkstyle:AbbreviationAsWordInName", "checkstyle:RegexpMultiline", "checkstyle:EmptyLineSeparator"})
+   static void main() {
        // цифра
        int number = 1;
        System.out.println("цифра = " + number);
@@ -15,16 +17,16 @@ public class VariableNamesTheme {
        System.out.println();
 
        //количество десятков
-       int number_of_dozenz = 10;
-       System.out.println("количество десятков =" + number_of_dozenz);
+       int tensCount = 10;
+       System.out.println("количество десятков =" + tensCount);
 
        //вес собаки
-       int dogs_weight = 6;
-       System.out.println("вес собаки = " + dogs_weight);
+       int dogsWeight = 6;
+       System.out.println("вес собаки = " + dogsWeight);
 
        //исходное число
-       int original_number = 1;
-       System.out.println("исходное число = " + original_number);
+       int originalNumber = 1;
+       System.out.println("исходное число = " + originalNumber);
 
        System.out.println();
 
@@ -33,13 +35,13 @@ public class VariableNamesTheme {
        System.out.println("процент по вкладу = " + percent);
 
        // символ &
-       String symbol = "&";
-       System.out.println("символ " + symbol);
+       String ampersand  = "&";
+       System.out.println("символ " + ampersand );
 
        //код ошибки
 
-       int eror = 567893894;
-       System.out.println("код ошибки = " + eror);
+       int error = 567893894;
+       System.out.println("код ошибки = " + error);
 
        System.out.println();
 
@@ -48,22 +50,22 @@ public class VariableNamesTheme {
        System.out.println("тип сообщения = " + string);
 
        //число нулей
-       int number_of_zeros = 3;
-       System.out.println("число нулей = " + number_of_zeros);
+       int zerosCount  = 3;
+       System.out.println("число нулей = " + zerosCount );
 
        //уникальное число
-       int numver_1 = 6;
-       System.out.println("уникальное число = " + numver_1);
+       int uniqueNumber  = 6;
+       System.out.println("уникальное число = " + uniqueNumber );
 
        System.out.println();
 
        // случайное число
-       int random_number = 3;
-       System.out.println("случайное число = " + random_number);
+       int randomNumber = 3;
+       System.out.println("случайное число = " + randomNumber);
 
        //математическое выражение
-       String mathematical_expression ="8+9-8";
-       System.out.println("математическое выражение " + mathematical_expression);
+       String mathematicalExpression ="8+9-8";
+       System.out.println("математическое выражение " + mathematicalExpression);
 
        //счет в игре
 
@@ -72,7 +74,7 @@ public class VariableNamesTheme {
 
        System.out.println();
 
-       //максимальная длинна
+       //максимальная длина
        int maximum = 98;
        System.out.println("максимальная длинна = " + maximum);
 
@@ -81,8 +83,8 @@ public class VariableNamesTheme {
        System.out.println("пункт меню = " + menu);
 
        // стоимость кофе
-       double coffe = 234.5;
-       System.out.println("стоимость кофе = " + coffe);
+       double coffee = 234.5;
+       System.out.println("стоимость кофе = " + coffee);
 
        System.out.println();
 
@@ -91,12 +93,12 @@ public class VariableNamesTheme {
        System.out.println("начальная дата = " + data);
 
        //окончание диапазона
-       int the_end = 99;
-       System.out.println("окончание диапазона =" + the_end);
+       int rangeEnd  = 99;
+       System.out.println("окончание диапазона =" + rangeEnd );
 
        //имя работника месяца
-       String name = "Иван";
-       System.out.println("имя работника месяца = " + name);
+       String employee = "Иван";
+       System.out.println("имя работника месяца = " + employee);
 
        System.out.println();
 
@@ -129,8 +131,8 @@ public class VariableNamesTheme {
        System.out.println();
 
        //сотни равны?
-       boolean equality_numbera = false;
-       System.out.println("сотни равны? " + equality_numbera);
+       boolean equalityNumber = false;
+       System.out.println("сотни равны? " + equalityNumber);
 
        //компьютер включен?
        boolean computer = true;
@@ -143,8 +145,8 @@ public class VariableNamesTheme {
        System.out.println();
 
        //служба создана?
-       boolean servise = false;
-       System.out.println("служба создана? " + servise);
+       boolean service = false;
+       System.out.println("служба создана? " + service);
 
        // файл пустой?
        boolean file = false;
@@ -169,14 +171,8 @@ public class VariableNamesTheme {
        System.out.println("имеются уникальные строки? " + unique_strings);
 
        System.out.println();
-       int UUID;
-       int RAM;
-       int HDD;
-       int HTTP;
-       int URL;
-       int User_ID;
-       int ASCII;
 
 
-   }}
+   }
+}
 
