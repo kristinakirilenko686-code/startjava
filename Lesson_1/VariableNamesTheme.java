@@ -2,6 +2,7 @@ package Lesson_1;
 
 public class VariableNamesTheme {
     static void main() {
+        System.out.println("\n1. РАЗНЫЕ ПЕРЕМЕННЫЕ\n");
         // цифра
         int number = 1;
         System.out.println("цифра = " + number);
@@ -9,6 +10,10 @@ public class VariableNamesTheme {
         // сумма чисел
         int sum = 12 + 5;
         System.out.println("сумма чисел = " + sum);
+
+        // произведение цифр
+        int digitProduct = 123;
+        System.out.println("Произведение цифр = " + digitProduct);
 
         // максимальное число
         int max = 5;
@@ -31,22 +36,22 @@ public class VariableNamesTheme {
         System.out.println();
 
         // процент по вкладу
-        int percent = 10;
-        System.out.println("процент по вкладу = " + percent);
+        int interestRate = 25;
+        System.out.println("Процент по вкладу = " + interestRate + "%");
 
         // символ &
         String ampersand = "&";
         System.out.println("символ " + ampersand);
 
         // код ошибки
-        int error = 567893894;
-        System.out.println("код ошибки = " + error);
+        String errorCode = "404";
+        System.out.println("Код ошибки = " + errorCode);
 
         System.out.println();
 
         // тип сообщения
-        String string = "тип сообщения";
-        System.out.println("тип сообщения = " + string);
+        String messageType = "txt";
+        System.out.println("Тип сообщения = " + messageType);
 
         // число нулей
         int zerosCount = 3;
@@ -63,47 +68,46 @@ public class VariableNamesTheme {
         System.out.println("случайное число = " + randomNumber);
 
         // математическое выражение
-        String mathematicalExpression = "8+9-8";
-        System.out.println("математическое выражение " + mathematicalExpression);
+        String mathExpr = "1 + 2 + 3";
+        System.out.println("Математическое выражение = " + mathExpr);
 
-        // счет в игре
-
-        String account = "3:0";
-        System.out.println("счет в игре = " + account);
+        // счёт в игре
+        int gameScore = 3;
+        System.out.println("Счёт в игре = " + gameScore);
 
         System.out.println();
 
         // максимальная длина
-        int maximum = 98;
-        System.out.println("максимальная длинна = " + maximum);
+        int maxLen = 98;
+        System.out.println("максимальная длинна = " + maxLen);
 
         // пункт меню
-        String menu = "кофе";
-        System.out.println("пункт меню = " + menu);
+        String menuItem = "File";
+        System.out.println("Пункт меню = " + menuItem);
 
         // стоимость кофе
-        double coffee = 234.5;
-        System.out.println("стоимость кофе = " + coffee);
+        double coffeePrice = 250.5;
+        System.out.println("Стоимость кофе = " + coffeePrice + " руб");
 
         System.out.println();
 
         // начальная дата
-        int data = 6;
-        System.out.println("начальная дата = " + data);
+        int startDate = 6;
+        System.out.println("начальная дата = " + startDate);
 
         // окончание диапазона
         int rangeEnd = 99;
         System.out.println("окончание диапазона =" + rangeEnd);
 
         // имя работника месяца
-        String employee = "Иван";
-        System.out.println("имя работника месяца = " + employee);
+        String employeeOfMonthName = "Иван Васильевич Петров";
+        System.out.println("имя работника месяца = " + employeeOfMonthName);
 
         System.out.println();
 
         // название электронной книги
-        String book = "Весна";
-        System.out.println("название электронной книги = " + book);
+        String ebookTitle = "Весна";
+        System.out.println("название электронной книги = " + ebookTitle);
 
         // размер
         int size = 57;
@@ -120,56 +124,86 @@ public class VariableNamesTheme {
         System.out.println("счетчик = " + counter);
 
         // путь до файла
-        String way = "C:\\startjava\\Lesson__1\\src";
-        System.out.println("путь до файла = " + way);
+        String filePath = "C:\\startjava\\Lesson__1\\src";
+        System.out.println("путь до файла = " + filePath);
 
         // количество чисел в строке
-        int quantity = 10;
-        System.out.println("количество чисел в строке = " + quantity);
+        int numsPerLine = 10;
+        System.out.println("количество чисел в строке = " + numsPerLine);
 
         System.out.println();
 
         // сотни равны?
-        boolean equalityNumber = false;
-        System.out.println("сотни равны? " + equalityNumber);
+        boolean isEqualHundreds = false;
+        System.out.println("сотни равны? " + isEqualHundreds);
 
         // компьютер включен?
-        boolean computer = true;
-        System.out.println("компьютер включен? " + computer);
+        boolean isPcOn = true;
+        System.out.println("компьютер включен? " + isPcOn);
 
         // есть равные цифры?
-        boolean numbers = true;
-        System.out.println("есть равные цифры? " + numbers);
+        boolean hasEqualDigits = false;
+        System.out.println("есть равные цифры? " + hasEqualDigits);
 
         System.out.println();
 
         // служба создана?
-        boolean service = false;
-        System.out.println("служба создана? " + service);
+        boolean isCreatedService = true;
+        System.out.println("Служба создана? " + isCreatedService);
 
         // файл пустой?
-        boolean file = false;
-        System.out.println("файл пустой? " + file);
+        boolean isEmptyFile = true;
+        System.out.println("Файл пустой? " + isEmptyFile);
 
         // соединение активное?
-        boolean connection = true;
-        System.out.println("соединение активное? " + connection);
-
-        System.out.println();
+        boolean isActiveConnection = true;
+        System.out.println("Соединение активное? " + isActiveConnection);
 
         // новый?
-        boolean theNew = false;
-        System.out.println("новый ?" + theNew);
+        boolean isNew = false;
+        System.out.println("Новый? " + isNew);
 
         // электронная почта действительная?
-        boolean email = true;
-        System.out.println("электронная почта действительная? " + email);
+        boolean isValidEmail = false;
+        System.out.println("Электронная почта действительная? " + isValidEmail);
 
         // имеются уникальные строки?
-        boolean uniqueStrings = true;
-        System.out.println("имеются уникальные строки? " + uniqueStrings);
+        boolean hasUniqueStrings = true;
+        System.out.println("Имеются уникальные строки? " + hasUniqueStrings);
 
-        System.out.println();
+        System.out.println("\n3. АББРЕВИАТУРЫ\n");
+
+        // старый universally unique identifier
+        String oldUuid = "1301234433-77855-62377-8899";
+        System.out.println("Старый UUID = " + oldUuid);
+
+        // производитель оперативной памяти
+        String ramManufacturer = "SAMSUNG";
+        System.out.println("Производитель RAM = " + ramManufacturer);
+
+        // ёмкость жёсткого диска
+        int hddCapacity = 500000;
+        System.out.println("Емкость HDD = " + hddCapacity + " Мб\n");
+
+        // определение термина протокола передачи гипертекста
+        String aboutHttp = """
+                Определение HTTP:
+                  HTTP — протокол уровня приложений для распределённых,
+                  объединённых, гипермедийных информационных систем, используемый в
+                  глобальной информационной инициативе Всемирной паутины с 1990 года.
+                """;
+        System.out.println(aboutHttp);
+
+        // сокращенный uniform resource locator
+        String shortUrl = "https://short.url/123";
+        System.out.println("Сокращенный URL = " + shortUrl);
+
+        // новый идентификатор клиента
+        int newCid = 67936572;
+        System.out.println("Новый идентификатор клиента = " + newCid);
+
+        // количество символов в american standard code for information interchange
+        int asciiSymbolCount = 128;
+        System.out.println("Количество символов в ASCII-таблице = " + asciiSymbolCount);
     }
 }
-
