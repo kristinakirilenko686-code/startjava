@@ -59,53 +59,53 @@ public class IfElseStatementTheme {
 
         System.out.println("\n4. ОПРЕДЕЛЕНИЕ ПЕРВОГО СИМВОЛА НИКНЕЙМА");
         String nickname = "Xg8ig";
-        char firstSymbol = nickname.charAt(0);
+        char Symbol = nickname.charAt(0);
 
         System.out.println("Способ 1 (проверка диапазона)");
         System.out.print("  Имя '" + nickname + "' начинается с ");
-        if (firstSymbol >= 'a' && firstSymbol <= 'z') {
-            System.out.println("маленькой буквы " + firstSymbol);
-        } else if (firstSymbol >= 'A' && firstSymbol <= 'Z') {
-            System.out.println("большой буквы " + firstSymbol);
-        } else if (firstSymbol >= '0' && firstSymbol <= '9') {
-            System.out.println("цифры " + firstSymbol);
+        if (Symbol >= 'a' && Symbol <= 'z') {
+            System.out.println("маленькой буквы " + Symbol);
+        } else if (Symbol >= 'A' && Symbol <= 'Z') {
+            System.out.println("большой буквы " + Symbol);
+        } else if (Symbol >= '0' && Symbol <= '9') {
+            System.out.println("цифры " + Symbol);
         } else {
-            System.out.println("символа " + firstSymbol);
+            System.out.println("символа " + Symbol);
         }
 
         System.out.println("\nСпособ 2 (методы Character)");
         System.out.print("  Имя " + "'" + nickname + "'" + " начинается с ");
-        if (Character.isLowerCase(firstSymbol)) {
-            System.out.println("маленькой буквы " + firstSymbol);
-        } else if (Character.isUpperCase(firstSymbol)) {
-            System.out.println("большой буквы " + firstSymbol);
-        } else if (Character.isDigit(firstSymbol)) {
-            System.out.println("цифры " + firstSymbol);
+        if (Character.isLowerCase(Symbol)) {
+            System.out.println("маленькой буквы " + Symbol);
+        } else if (Character.isUpperCase(Symbol)) {
+            System.out.println("большой буквы " + Symbol);
+        } else if (Character.isDigit(Symbol)) {
+            System.out.println("цифры " + Symbol);
         } else {
-            System.out.println("символа " + firstSymbol);
+            System.out.println("символа " + Symbol);
         }
 
         System.out.println("\n5. ИНВЕНТАРИЗАЦИЯ");
-        int dbSerialNumber = 467;
-        int serialNumberOfObject = 957;
+        int dbSeria = 467;
+        int pcSerial  = 957;
 
-        if (dbSerialNumber == serialNumberOfObject) {
-            System.out.print("[№" + serialNumberOfObject + "]: компьютер на 3-м этаже в кабинете 2");
+        if (dbSeria == pcSerial) {
+            System.out.print("[№" + pcSerial + "]: компьютер на 3-м этаже в кабинете 2");
         } else {
-            boolean isEqual = (dbSerialNumber % 10) == (serialNumberOfObject % 10);
-            boolean isEqualTens = (dbSerialNumber / 10 % 10) == (serialNumberOfObject / 10 % 10);
-            boolean isEqualHundreds = (dbSerialNumber / 100) == (serialNumberOfObject / 100);
+            boolean isEqual = (dbSeria % 10) == (pcSerial % 10);
+            boolean isEqualTens = (dbSeria / 10 % 10) == (pcSerial / 10 % 10);
+            boolean isEqualHundreds = (dbSeria / 100) == (pcSerial / 100);
 
             if (!isEqual && !isEqualTens && !isEqualHundreds) {
-                System.out.print("[№" + serialNumberOfObject + "]: оборудование не идентифицировано");
+                System.out.print("[№" + pcSerial + "]: оборудование не идентифицировано");
             } else {
                 System.out.printf("""
                                 Нет полного совпадения:
                                 База данных: [№%d]
-                                Фактический: [№%s%s%s]""", dbSerialNumber,
-                        isEqualHundreds ? dbSerialNumber % 10 : "_",
-                        isEqualTens ? dbSerialNumber / 10 % 10 : "_",
-                        isEqual ? dbSerialNumber / 100 : "_");
+                                Фактический: [№%s%s%s]""", dbSeria,
+                        isEqualHundreds ? dbSeria % 10 : "_",
+                        isEqualTens ? dbSeria / 10 % 10 : "_",
+                        isEqual ? dbSeria / 100 : "_");
             }
         }
         System.out.println("\n6. ПОДСЧЕТ НАЧИСЛЕННЫХ БАНКОМ %");
@@ -146,31 +146,37 @@ public class IfElseStatementTheme {
         System.out.println("Итоговая сумма с %: " + totalAmountBd + " руб.");
 
         System.out.println("\n7. ОПРЕДЕЛЕНИЕ ОЦЕНКИ ПО ПРЕДМЕТАМ");
-        int historyPercent = 59;
-        int historyGrade;
+        String subject1 = "История";
+        int percent1 = 59;
 
-        if (historyPercent > 91) {
-            historyGrade = 5;
-        } else if (historyPercent > 73){
-            historyGrade = 4;
-        } else if (historyPercent > 60) {
-            historyGrade = 3;
+        String subject2 = "Программирование";
+        int percent2 = 92;
+
+        int grade1;
+        if (percent1 <= 60) {
+            grade1 = 2;
+        } else if (percent1 > 91) {
+            grade1 = 5;
+        } else if (percent1 > 73) {
+            grade1 = 4;
         } else {
-            historyGrade = 2;
+            grade1 = 3;
         }
-        int csPercent = 92;
-        int csGrade;
-        if (csPercent > 91) {
-            csGrade = 5;
-        } else if (csPercent > 73) {
-            csGrade = 4;
-        } else if (csPercent > 60) {
-            csGrade = 3;
+
+        int grade2;
+        if (percent2 <= 60) {
+            grade2 = 2;
+        } else if (percent2 > 91) {
+            grade2 = 5;
+        } else if (percent2 > 73) {
+            grade2 = 4;
         } else {
-            csGrade = 2;
+            grade2 = 3;
         }
-        double averageGrade = (historyGrade + csGrade) / 2.0;
-        double averagePercent = (historyPercent + csPercent) / 2.0;
+        System.out.println(subject1 + ": " + grade1);
+        System.out.println(subject2 + ": " + grade2);
+        double averageGrade = (grade1 + grade2) / 2.0;
+        double averagePercent = (percent1 + percent2) / 2.0;
         System.out.println("Средний балл: " + averageGrade);
         System.out.println("Средний %: " + averagePercent);
 

@@ -8,19 +8,13 @@ import java.time.format.DateTimeFormatter;
 public class VariablesTheme {
     static void main() {
         System.out.println("1. ВЫВОД ASCII-ГРАФИКИ");
-        System.out.println("Способ 1");
-        System.out.println(
-                """
-                                             /\\\
-                        
-                           J    a  v     v  /  \\\
-                        
-                           J   a a  v   v  /_( )\\\
-                        
-                        J  J  aaaaa  V V  /      \\\
-                        
-                         JJ  a     a  V  /___/\\___\\
-                        """);
+        System.out.println("Способ 1 (String.join())");
+        System.out.println(String.join("\n",
+                "                     /\\",
+                "   J    a  v     v  /  \\",
+                "   J   a a  v   v  /_( )\\",
+                "J  J  aaaaa  V V  /      \\",
+                " JJ  a     a  V  /___/\\___\\"));
 
         System.out.println("Способ 2 (Text block)");
         System.out.println("""
@@ -31,7 +25,7 @@ public class VariablesTheme {
                  JJ  /___/\\___\\  V  a     a""");
 
         System.out.println();
-        System.out.println("РАСЧЕТ СТОИМОСТИ ТОВАРА");
+        System.out.println("2.РАСЧЕТ СТОИМОСТИ ТОВАРА");
 
         System.out.println("Способ 1 (float)");
         float penPrice = 105.5f;
@@ -45,7 +39,6 @@ public class VariablesTheme {
         System.out.println("  Сумма скидки: " + discountSum + " руб.");
         System.out.println("  Стоимость товаров со скидкой: " + (basePrice - discountSum) + " руб.");
 
-        System.out.println();
         System.out.println("Способ 2 (BigDecimal)");
 
         BigDecimal penPriceBd = new BigDecimal("105.5");
@@ -60,8 +53,6 @@ public class VariablesTheme {
         System.out.println("  Сумма скидки: " + discountSumBd + " руб.");
         System.out.println("  Стоимость товаров со скидкой: " + discountPriceBd + " руб.");
 
-        System.out.println();
-
         System.out.println("3. ПЕРЕСТАНОВКА ЗНАЧЕНИЙ ЯЧЕЕК В ТАБЛИЦЕ");
 
         int a = 2;
@@ -72,7 +63,7 @@ public class VariablesTheme {
         int swap = a;
         a = b;
         b = swap;
-        System.out.println("  Результат: A = " + a + ", B1 = " + b);
+        System.out.println("  Результат: A = " + a + ", B = " + b);
 
         System.out.println("Метод: арифметические операции");
         a += b;
@@ -86,7 +77,7 @@ public class VariablesTheme {
         a ^= b;
         System.out.println("  Результат: A = " + a + ", B = " + b);
 
-        System.out.println("\n4. ДЕКОДИРОВАНИЕ СООБЩЕНИЯ");
+        System.out.println("4. ДЕКОДИРОВАНИЕ СООБЩЕНИЯ");
         int code1055 = 1055;
         int code1088 = 1088;
         int code1080 = 1080;
@@ -98,8 +89,7 @@ public class VariablesTheme {
         System.out.printf("%5c%5c%5c%5c%5c%5c%n",
                 code1055, code1088, code1080, code1074, code1077, code1090);
 
-        System.out.println();
-        System.out.println("\n5. АНАЛИЗ КОДА ТОВАРА");
+        System.out.println("5. АНАЛИЗ КОДА ТОВАРА");
         int productCode = 123;
         int category = productCode / 100;
         int subcategory = productCode / 10 % 10;
@@ -111,8 +101,6 @@ public class VariablesTheme {
                 "\n  тип упаковки - " + packageType +
                 "\nКонтрольная сумма = " + (category + subcategory + packageType) +
                 "\nПроверочный код = " + (category * subcategory * packageType));
-
-        System.out.println();
 
         System.out.println("6. ТЕСТИРОВАНИЕ ДАТЧИКОВ ПЕРЕД ЗАПУСКОМ РАКЕТЫ");
         byte temp = Byte.MAX_VALUE;
@@ -155,34 +143,30 @@ public class VariablesTheme {
                   -1: %d
                 """, missionElapsedTime, ++missionElapsedTime, --missionElapsedTime);
 
-        System.out.println();
-        System.out.println("ЗАМЕР ВРЕМЕНИ РАБОТЫ КОДА");
+        System.out.println("7. ЗАМЕР ВРЕМЕНИ РАБОТЫ КОДА");
 
-        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("HH:mm:ss.SSS");
-        long startNanos = System.nanoTime();
+        long startTimeNano = System.nanoTime();
         LocalTime startTime = LocalTime.now();
-        try {
-            Thread.sleep(59);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+
+        long sum = 0;
+        for (int i = 1; i <= 1e9; i++) {
+            sum += i;
         }
 
-        long endNanos = System.nanoTime();
+        long endTimeNano = System.nanoTime();
         LocalTime endTime = LocalTime.now();
 
-        double elapsedSeconds = (endNanos - startNanos) / 1_000_000_000.0;
-        String formattedTime = String.format("%.3f", elapsedSeconds).replace('.', ',');
-        System.out.printf("""
-                        | Старт проверки | %s |
-                        +----------------+--------------+
-                        | Финиш проверки | %s |
-                        +----------------+--------------+
-                        | Время работы   | %s сек    |
-                        """,
-                dtf.format(startTime),
-                dtf.format(endTime),
-                formattedTime
-        );
+        double elapsedSeconds = (endTimeNano - startTimeNano) / 1e9;
+
+        String formattedTime = String.format("%.3f", elapsedSeconds);
+
+        System.out.println("    \"\"\"");
+        System.out.println("    | Старт проверки | " + startTime.format(java.time.format.DateTimeFormatter.ofPattern("HH:mm:ss.SSS")) + " |");
+        System.out.println("    +----------------+--------------+");
+        System.out.println("    | Финиш проверки | " + endTime.format(java.time.format.DateTimeFormatter.ofPattern("HH:mm:ss.SSS")) + " |");
+        System.out.println("    +----------------+--------------+");
+        System.out.println("    | Время работы   | " + formattedTime.replace('.', ',') + " сек    |");
+        System.out.println("    \"\"\"");
     }
 }
 

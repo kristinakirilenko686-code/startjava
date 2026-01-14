@@ -26,8 +26,8 @@ public class VariableNamesTheme {
         System.out.println("количество десятков =" + tensCount);
 
         // вес собаки
-        int dogsWeight = 6;
-        System.out.println("вес собаки = " + dogsWeight);
+        int dogWeight = 6;
+        System.out.println("вес собаки = " + dogWeight);
 
         // исходное число
         int originalNumber = 1;
