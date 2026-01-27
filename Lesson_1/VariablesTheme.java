@@ -7,6 +7,9 @@ import java.time.format.DateTimeFormatter;
 
 public class VariablesTheme {
     static void main() {
+        final LocalTime startTime = LocalTime.now();
+        final long startNanos = System.nanoTime();
+
         System.out.println("\n1. ВЫВОД ASCII-ГРАФИКИ");
         System.out.println("Способ 1 (String.join())");
         System.out.println(String.join("\n",
@@ -142,13 +145,8 @@ public class VariablesTheme {
 
         System.out.println("\n7. ЗАМЕР ВРЕМЕНИ РАБОТЫ КОДА");
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss.SSS");
-        long startNanos = System.nanoTime();
-        LocalTime startTime = LocalTime.now();
 
-        long finishNanos = System.nanoTime();
-        LocalTime finishTime = LocalTime.now();
-
-        double duration = (finishNanos - startNanos) / 1e9;
+        double duration = (System.nanoTime() - startNanos) / 1e9;
 
         System.out.printf("""
                 Старт проверки: %s
