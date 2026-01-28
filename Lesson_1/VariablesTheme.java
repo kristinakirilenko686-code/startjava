@@ -145,14 +145,12 @@ public class VariablesTheme {
 
         System.out.println("\n7. ЗАМЕР ВРЕМЕНИ РАБОТЫ КОДА");
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss.SSS");
-
         double duration = (System.nanoTime() - startNanos) / 1e9;
-
-        System.out.printf("""
-                Старт проверки: %s
-                Финиш проверки: %s
-                Время работы: %.3f сек
-                """, formatter.format(startTime), formatter.format(LocalTime.now()), duration);
+        System.out.println("| Старт проверки | " + formatter.format(startTime) + " |");
+        System.out.println("+----------------+--------------+");
+        System.out.println("| Финиш проверки | " +  formatter.format(LocalTime.now()) + " |");
+        System.out.println("+----------------+--------------+");
+        System.out.println("| Время работы   | " + duration + " сек    |");
     }
 }
 

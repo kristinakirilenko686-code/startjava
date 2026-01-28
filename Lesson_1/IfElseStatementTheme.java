@@ -137,9 +137,9 @@ public class IfElseStatementTheme {
         BigDecimal totalAmountBd = depositBd
                 .add(interestAmountBd)
                 .setScale(2, RoundingMode.HALF_UP);
-       System.out.println("Сумма вклада: " + depositBd + " руб.");
+        System.out.println("Сумма вклада: " + depositBd + " руб.");
         System.out.println("Сумма начисленного %: " + interestAmountBd + " руб.");
-        System.out.println( "Итоговая сумма с %: " + totalAmountBd + " руб.");
+        System.out.println("Итоговая сумма с %: " + totalAmountBd + " руб.");
 
         System.out.println("\n7. ОПРЕДЕЛЕНИЕ ОЦЕНКИ ПО ПРЕДМЕТАМ");
         int historyPercent = 59;
@@ -156,9 +156,7 @@ public class IfElseStatementTheme {
         int programmingPercent = 92;
         int programmingGrade = 2;
 
-        if (programmingPercent <= 60) {
-            programmingGrade = 2;
-        } else if (programmingPercent > 91) {
+        if (programmingPercent > 91) {
             programmingGrade = 5;
         } else if (programmingPercent > 73) {
             programmingGrade = 4;
@@ -173,8 +171,8 @@ public class IfElseStatementTheme {
         System.out.println("Средний %: " + averagePercent);
 
         System.out.println("\n8. РАСЧЕТ ГОДОВОЙ ПРИБЫЛИ");
-        BigDecimal monthlyRent  = new BigDecimal("5123.018");
-        BigDecimal monthlyCost  = new BigDecimal("9001.729");
+        BigDecimal monthlyRent = new BigDecimal("5123.018");
+        BigDecimal monthlyCost = new BigDecimal("9001.729");
         BigDecimal monthlyRevenue = new BigDecimal("13025.233");
 
         BigDecimal profit1 = monthlyRevenue.subtract(monthlyCost)
